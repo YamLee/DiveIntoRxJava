@@ -33,7 +33,7 @@ public class ApiIml implements Api {
     public void store(ShopEntity shopEntity, ShopStoreCallBack shopStoreCallBack) {
         try {
             Thread.sleep(2000);
-            shopStoreCallBack.onSuccess("http://new_shop_url");
+            shopStoreCallBack.onSuccess(shopEntity.getImage());
         } catch (InterruptedException e) {
             e.printStackTrace();
             shopStoreCallBack.onFail(e.getMessage());
